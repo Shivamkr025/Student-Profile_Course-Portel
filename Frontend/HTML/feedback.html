@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Page</title>
+  <link rel="stylesheet" href="../Style/feedback.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Student Portal</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="page-container">
+    
+    <!-- Left Side Content -->
+    <div class="left-content">
+      <div class="content-wrapper">
+        <h1>We Value Your <span>Feedback</span></h1>
+        <p>
+          Help us improve your learning experience. Your feedback will guide us 
+          in enhancing our teaching methods, resources, and support. 
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <i class="fa-solid fa-star"></i>
+            <p>Rate your experience easily</p>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-comments"></i>
+            <p>Share honest comments</p>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-lightbulb"></i>
+            <p>Give suggestions for improvement</p>
+          </div>
+        </div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" 
+             alt="Feedback Illustration" class="illustration">
+      </div>
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="right-form">
+      <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form>
+          <!-- Student Name -->
+          <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" name="student-name" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Rating -->
+          <div class="form-group">
+            <label>Rating</label>
+            <div class="stars">
+              <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+          </div>
+
+          <!-- Comment -->
+          <div class="form-group">
+            <label for="comment">Comments</label>
+            <textarea id="comment" name="comment" placeholder="Write your feedback here..." rows="4"></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+   <footer>
+        <p>&copy; 2025 Student Portal | Designed by Shivam</p>
+    </footer>
+</body>
+</html>
