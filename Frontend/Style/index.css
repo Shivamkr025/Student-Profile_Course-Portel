@@ -1,0 +1,317 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background: #f8f9fb;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #1e3c72;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background: #ffdd57;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+    background: #ffc107;
+}
+
+.hero-image img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 50px;
+    text-align: center;
+}
+
+.highlights h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #1e3c72;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2a5298;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    background: #eef2f7;
+    text-align: center;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: #1e3c72;
+}
+
+/* Events Section */
+.events {
+    
+    padding: 50px;
+    text-align: center;
+}
+
+.events h2 {
+    margin-bottom: 30px;
+    color: #1e3c72;
+}
+
+.event-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    text-align: center;
+    color: white;
+}
+
+.newsletter form {
+    margin-top: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background: #ffdd57;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background: #ffc107;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 30px;
+    color: #1e3c72;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e3c72;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+
+/* Tablet View (max-width: 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+
+  .cards, .course-cards, .event-cards, .testi-cards, .gallery-grid, .stats {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .testi-card {
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
