@@ -2,12 +2,16 @@ import { Course } from "../model/courses.js";
 import { v2 as cloudinary } from "cloudinary";
 
 // ✅ Create a new course
-
 export const createCourse = async (req, res) => {
     try {
         const { title, description, instructor, oldPrice, offerPrice } = req.body;
 
-        let imageUrl = req.file ? req.file.path : ""; // Cloudinary gives URL directly
+        // Upload Image if available
+        let imageUrl = '';
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path);
+            imageUrl = result.secure_url; // Store image URL
+        }
 
         const course = new Course({
             title,
@@ -16,15 +20,22 @@ export const createCourse = async (req, res) => {
             image: imageUrl,
             oldPrice,
             offerPrice,
-            enrolledCount: 0, // matches schema
+            enrolledCount: 0,
         });
 
         await course.save();
-        res.status(201).json({ success: true, message: "Course created", course });
+
+        res.status(201).json({
+            success: true,
+            message: "Course created successfully",
+            course,
+        });
     } catch (err) {
+        console.error("Upload Error:", err);
         res.status(500).json({ success: false, message: err.message });
     }
 };
+
 
 // ✅ Get all courses
 export const getCourses = async (req, res) => {

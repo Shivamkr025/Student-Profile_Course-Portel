@@ -4,7 +4,10 @@ const CourseSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: String,
     instructor: String,
-    image: String,  // thumbnail or course image
+    image: {
+        type: String,
+        default: '',
+    }, // thumbnail or course image
 
     // New fields
     enrolledCount: { type: Number, default: 0 }, // how many students enrolled

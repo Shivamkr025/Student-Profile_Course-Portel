@@ -12,17 +12,18 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+console.log(process.env.CLOUD_NAME);
+
 // Multer Storage
 const storage = new CloudinaryStorage({
-  cloudinary,
+  cloudinary: cloudinary,
   params: {
-    folder: "student_portal/courses",
-    allowed_formats: ["jpg", "jpeg", "png"],
-    transformation: [{ width: 1200, crop: "limit" }],
+    folder: 'student_portal/courses', // Folder in Cloudinary
+    format: async (req, file) => 'png', // Image format
+    public_id: (req, file) => file.fieldname + '-' + Date.now(),
   },
 });
 
-const parser = multer({ storage });
-const upload = parser;
+const upload = multer({ storage : storage });
 
 export { upload, cloudinary };
