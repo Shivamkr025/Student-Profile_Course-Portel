@@ -1,0 +1,206 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0047ff, #001f63);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #1e3c72;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffdd57;
+}
+
+.grades-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 120px auto 30px; 
+  padding: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.grades-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.grades-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffdd57;
+}
+
+.grades-info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.grades-info ul {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.grades-info ul li {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.grades-info .tip {
+  color: #ffdd57;
+  font-weight: bold;
+}
+
+.container {
+  flex: 2;
+  min-width: 400px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 28px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #0047ff;
+  color: #fff;
+}
+
+thead th {
+  padding: 14px;
+  font-size: 16px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+tbody tr:hover {
+  background-color: #f2f6ff;
+  transition: 0.3s ease;
+}
+
+.grade.A {
+  color: #1a8b00;
+  font-weight: bold;
+}
+
+.grade.B {
+  color: #0091ff;
+  font-weight: bold;
+}
+
+.grade.C {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.grade.F {
+  color: #ff2c2c;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: #1e3c72;
+  color: white;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .grades-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .grades-info, .container {
+      max-width: 100%;
+  }
+
+  .container h1 {
+      font-size: 22px;
+  }
+
+  table {
+      font-size: 14px;
+  }
+
+  thead th,
+  tbody td {
+      padding: 10px;
+  }
+} 
